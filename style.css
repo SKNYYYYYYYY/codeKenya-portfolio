@@ -1,12 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
 :root {
-  --primary:  oklch(0.546 0.245 262.881);
+  --primary:  oklch(49.692% 0.15709 261.208);
   --primary-foreground: oklch(0.707 0.165 254.624);
   --secondary: oklch(0.707 0.165 254.624);
   --secondary-foreground: oklch(0.282 0.091 267.935);
-  --accent: oklch(81.463% 0.06428 255.146);
+  /* --accent: oklch(81.463% 0.06428 255.146); */
+  --accent: oklch(71.058% 0.12457 255.476 / 0.849);
   --accent-foreground: #1e69dc;
-  --background: oklch(0.97 0.014 254.604);
+  /* --background: oklch(0.97 0.014 254.604); */
+  --background: oklch(84.438% 0.07541 254.774 / 0.566);
   --background-foreground: oklch(0.424 0.199 265.638);
   --muted: #f5f5f5;
   --muted-foreground: #525252;
@@ -15,6 +17,7 @@
   --border: #e7e7ee;
   --input: #ebebeb;
   --ring: #000000;
+  --primary-foreground-alternative: rgb(199, 228, 243)
 }
 html {
   scroll-behavior: smooth;
@@ -89,10 +92,13 @@ ul {
     padding: 0 120px;
   }
 }
-
+.logo {
+  display: flex;
+  gap: 10px
+}
 .logo span {
   display: block;
-  background-color: var(--accent);
+  background-color: #edf5ff ;
   height: 10px;
   width: 20px;
   border-radius: 0 0 15px 15px;
@@ -204,7 +210,6 @@ ul {
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  background: none;
 }
 
 .hero-wrapper::before {
@@ -233,12 +238,15 @@ ul {
   opacity: 0.18;
   z-index: 0;
 }
-
+.hero-wrapper-bg {
+  background-color: None
+}
 .hero-container .intro-text {
   font-size: 2.5rem;
   font-weight: 700;
   color: var(--primary-foreground);
   margin-bottom: 1rem;
+  text-align: center;
 }
 
 .hero-container .intro-highlight {
@@ -251,6 +259,12 @@ ul {
   color: var(--secondary-foreground);
   font-size: 1.2rem;
   margin-bottom: 2rem;
+}
+.hero-last-wrapper {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+
 }
 .hero-cta {
   background: var(--accent);
@@ -301,7 +315,7 @@ ul {
   font-family: Poppins, Arial, Helvetica, sans-serif;
   line-height: 24px;
   text-transform: capitalize;
-  color: var(--primary-foreground);
+  color: var(--primary-foreground-alternative);
   text-align: center;
   cursor: pointer;
   transition-property: color, background-color, filter, transform, border-color;
@@ -311,7 +325,7 @@ ul {
 
 .btn:hover, .btn:focus {
   background-color: var(--accent);
-  color: var(--accent-foreground);
+  color: white;
   border-color: var(--ring);
   filter: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
   transform: translateY(-3px);
@@ -393,7 +407,7 @@ ul {
   display: flex;
   align-items: center;
   gap: 12px;
-  color: var(--primary-foreground);
+  color: var(--primary-foreground-alternative);
 }
 
 .project-container .btn {
@@ -423,7 +437,6 @@ ul {
   gap: 16px;
   background-color: var(--muted);
   border-radius: 8px;
-  margin: 10px 0;
   font-weight: 500;
   font-size: 15px;
   line-height: 20px;
@@ -520,7 +533,7 @@ ul {
 }
 
 .b-bottom {
-  border-bottom: var(--border) 1px solid;
+  border-bottom: #edf5ff 1px solid;
 }
 
 
@@ -630,7 +643,7 @@ form {
 .contact-container input,
 textarea {
   width: 100%;
-  background-color: var(--secondary);
+  background-color: #edf5ff;
   margin-bottom: 20px;
   border-radius: 8px;
   border-color: transparent;
